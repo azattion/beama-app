@@ -28,7 +28,8 @@ class Index extends Component
 
     public function send(User $user): void
     {
-        broadcast(new UserCreated($user));
+        broadcast(new UserCreated($user))->toOthers();
+
         session()->flash('message', 'Pushed successfully.');
     }
 }

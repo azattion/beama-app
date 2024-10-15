@@ -27,7 +27,9 @@ class ProductCreated implements ShouldBroadcast
      */
     public function broadcastOn(): array
     {
-        return ['product-channel'];
+        return [
+            new Channel('product-channel')
+        ];
     }
 
     public function broadcastAs(): string

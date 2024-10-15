@@ -888,23 +888,5 @@
     </div>
 </div>
 </body>
-<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-<script>
-    Pusher.logToConsole = true;
-
-    var pusher = new Pusher('de1fbe7fc2fd77a3e7c2', {
-        cluster: 'ap2'
-    });
-
-    var channel = pusher.subscribe('user-channel');
-    channel.bind('UserCreated', function (data) {
-        console.log(data)
-    });
-
-    channel = pusher.subscribe('product-channel');
-    channel.bind('ProductCreated', function (data) {
-        console.log(data)
-    });
-</script>
 @livewireScripts
 </html>
