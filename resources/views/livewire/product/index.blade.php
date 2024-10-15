@@ -17,8 +17,12 @@
             <tbody>
             @foreach($products as $product)
                 <tr class="border-b hover:bg-gray-50">
-                    <td class="p-4">{{ $product->id }}</td>
-                    <td class="p-4">{{ $product->name }}</td>
+                    <td class="p-4">
+                        <a href="{{ route('products.show', $product->id) }}">{{ $product->id }}</a>
+                    </td>
+                    <td class="p-4">
+                        <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
+                    </td>
                     <td class="p-4">{{ $product->price }} som</td>
                     <td class="p-4">{{ $product->category->name }}</td>
                     <td class="p-4">{{ $product->created_at }}</td>
@@ -27,7 +31,8 @@
                         <a href="{{ route('products.edit', $product->id) }}">
                             edit
                         </a>
-                        <a class="w-20 sm:w-28 btn btn-primary" href="#" wire:click="delete({{ $product->id }})" wire:confirm="Are you sure?" wire:loading.attr="disabled">
+                        <a class="w-20 sm:w-28 btn btn-primary" href="#" wire:click="delete({{ $product->id }})"
+                           wire:confirm="Are you sure?" wire:loading.attr="disabled">
                             delete
                         </a>
                     </td>

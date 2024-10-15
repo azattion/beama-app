@@ -14,8 +14,12 @@
             <tbody>
             @foreach($users as $user)
                 <tr class="border-b hover:bg-gray-50">
-                    <td class="p-4">{{ $user->id }}</td>
-                    <td class="p-4">{{ $user->name }}</td>
+                    <td class="p-4">
+                        <a href="{{ route('users.show', $user->id) }}">{{ $user->id }}</a>
+                    </td>
+                    <td class="p-4">
+                        <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
+                    </td>
                     <td class="p-4">{{ $user->email }}</td>
                     <td class="p-4">{{ $user->created_at->format('Y-m-d') }}</td>
                     <td class="p-4">

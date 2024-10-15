@@ -19,14 +19,14 @@ Route::prefix('/users')->name('users.')->group(function () {
     Route::get('/', IndexUser::class)->name('index');
     Route::get('/create', CreateUser::class)->name('create');
     Route::get('/{user}/edit', EditUser::class)->name('edit');
-//    Route::get('/{user}', ShowUser::class)->name('show');
+    Route::get('/{user}', ShowUser::class)->name('show');
 });
 
 Route::prefix('/products')->name('products.')->group(function () {
     Route::get('/', IndexProduct::class)->name('index');
     Route::get('/create', CreateProduct::class)->name('create');
     Route::get('/{product}/edit', EditAlias::class)->name('edit');
-//    Route::get('/{product}', ShowProduct::class)->name('show');
+    Route::get('/{product}', ShowProduct::class)->name('show');
     Route::post('/{product}/tags', Tags::class)->name('tags');
 });
 

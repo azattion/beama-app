@@ -4,9 +4,7 @@ namespace App\Livewire\User;
 
 use App\Models\User;
 use Illuminate\View\View;
-
-use Illuminate\View\Component;
-
+use Livewire\Component;
 
 class Show extends Component
 {
