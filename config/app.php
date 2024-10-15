@@ -123,5 +123,8 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'header_key' => env('HEADER_KEY', 'Authorization'),
+    'header_key' => env('HEADER_KEY'),
+
+    'auth_user' => env('AUTH_USER'),
+    'auth_pass' => env('AUTH_PASS'),
 ];

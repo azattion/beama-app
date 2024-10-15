@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 
-class HeaderAuthMiddleware
+class ApiAuthMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
@@ -18,5 +17,4 @@ class HeaderAuthMiddleware
 
         return $next($request);
     }
-
 }
